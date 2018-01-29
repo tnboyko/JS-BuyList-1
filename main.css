@@ -1,8 +1,204 @@
-h1 {
-    color: red;
+body{
+    background: #DADADA;
 }
 
-.text2018 {
-    color: #ff59c0;
-    font-size: 40px;
+.background {
+    width: 100%;
+    background: #DADADA;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    padding: 20px;
+    font-size: 14px;
+    font: normal 15px "Calibri";
+    max-width: 1200px;
+}
+
+.left-column{
+    width: 68%;
+    background: #ffffff;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.right-column{
+    width: 30%;
+    background: white;
+    display: inline-block;
+    float: right;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.add-new-product{
+    width: 97%;
+    border-top: 1px solid #cdcbcb;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.row{
+    width: 97%;
+    border-top: 1px solid #cdcbcb;
+}
+
+
+.add-button{
+    background: #559fff;
+    color: white;
+    font: 22px "Calibri";
+    width: 19.4%;
+    float: right;
+    height: 38px;
+    outline: none;
+    padding-left: 0;
+    margin-left: 0;
+    border-left: 0;
+    border: solid;
+    border-width: 0;
+    border-color: #4173bb;
+    border-bottom-width: 3px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+
+.name{
+    align-items: center;
+    text-align: left;
+    width: 40%;
+    height: auto;
+    display: inline-block;
+    box-sizing: border-box;
+    font: normal 20px "Calibri";
+}
+
+.add-buttons{
+    width: 40%;
+    display: inline-block;
+    box-sizing: inherit;
+}
+
+.buttons{
+    width: 18%;
+    display: inline-block;
+    box-sizing: inherit;
+}
+
+.row{
+    padding: 15px;
+    vertical-align: middle;
+}
+
+.minus{
+    color: white;
+    background: #c8918e;
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    border: solid;
+    border-width: 0;
+    border-bottom-width: 2px;
+    border-color: #88625b;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.plus{
+    color: white;
+    background: #44823d;
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    border: solid;
+    border-width: 0;
+    border-bottom-width: 2px;
+    border-color: #265626;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.number{
+    height: 36px;
+    width: 36px;
+    background-color: #cdcbcb;
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.b-bought{
+    height: 36px;
+    width: 80px;
+    outline: none;
+    background-color: #cdcbcb;
+    border-radius: 5px;
+    border: solid;
+    border-width: 0;
+    border-color: #817f7f;
+    border-bottom-width: 3px;
+    display: inline-block;
+
+}
+
+.b-remove{
+    background-color: #c81004;
+    color: white;
+    height: 36px;
+    width: 36px;
+    outline: none;
+    border-radius: 5px;
+    border: solid;
+    border-width: 0;
+    border-bottom-width: 3px;
+    border-color: #880000;
+    display: inline-block;
+}
+
+.title{
+    font: bold 20px "Calibri";
+    padding: 10px;
+    border-top: 1px solid #cdcbcb;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #cdcbcb;
+}
+
+.left{
+    display: inline-block;
+    font: normal 14px "Calibri";
+    text-align: center;
+    padding: 5px;
+    margin: 2px;
+    background-color: #cdcbcb;
+    border-radius: 5px;
+
+}
+
+.what-left{
+    text-align: left;
+    display: inline-block;
+}
+
+.number-left{
+    display: inline-block;
+    text-align: center;
+    padding: 0;
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    color: white;
+    background-color: orangered;
+    border-radius: 10px;
+}
+
+input{
+    width: 80%;
+    height: 32px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
