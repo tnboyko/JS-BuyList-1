@@ -11,14 +11,14 @@
         <div class="row">
             <div class="add-new-product">
             <input type="text" placeholder="Назва товару"></input>
-                <button class="add-button">Додати</button>
+                <button class="add-button" data-tooltip="Додати продукт">Додати</button>
             </div>
             <div class="row">
                 <span class="name">Помідори</span>
                 <div class="add-buttons">
-                <button class="minus">-</button>
-                    <span class="number">1</span>
-                    <button class="plus">+</button>
+                <button class="minus" data-tooltip="Відняти">-</button>
+                    <span class="number" data-tooltip="Кількість">1</span>
+                    <button class="plus" data-tooltip="Додати">+</button>
                 </div>
                 <div class="buttons">
                     <button class="b-bought">Куплено</button>
@@ -28,9 +28,9 @@
             <div class="row">
                 <span class="name">Печиво</span>
                 <div class="add-buttons">
-                    <button class="minus">-</button>
-                    <span class="number">1</span>
-                    <button class="plus">+</button>
+                    <button class="minus" data-tooltip="Відняти">-</button>
+                    <span class="number" data-tooltip="Кількість">1</span>
+                    <button class="plus" data-tooltip="Додати">+</button>
                 </div>
                 <div class="buttons">
                     <button class="b-bought">Куплено</button>
@@ -40,9 +40,9 @@
             <div class="row">
                 <span class="name">Сир</span>
                 <div class="add-buttons">
-                    <button class="minus">-</button>
-                    <span class="number">1</span>
-                    <button class="plus">+</button>
+                    <button class="minus" data-tooltip="Відняти">-</button>
+                    <span class="number" data-tooltip="Кількість">1</span>
+                    <button class="plus" data-tooltip="Додати">+</button>
                 </div>
                 <div class="buttons">
                     <button class="b-bought">Куплено</button>
@@ -67,6 +67,11 @@
             </div>
 
         <div class="title">Куплено</div>
+
+        <div class="badge">
+            <div class="buylist">BuyList</div>
+            <div class="created-by">Created by Boyko Tanya</div>
+        </div>
 
 </div>
 </div>

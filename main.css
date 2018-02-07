@@ -66,6 +66,29 @@ body{
 
 }
 
+.add-button::after{
+    background-color: #803f7b;
+    color: white;
+    width: 100px;
+    height: 20px;
+    font: normal 14px "Calibri";
+    content: attr(data-tooltip);
+    position: absolute;
+    visibility: hidden;
+    transition: all 200ms ease;
+    opacity: 0;
+    border-radius: 5px;
+    margin-top: -10px;
+    margin-left: -85px;
+    padding: 5px;
+}
+
+.add-button:hover::after{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-30px);
+}
+
 .name{
     align-items: center;
     text-align: left;
@@ -107,6 +130,29 @@ body{
     display: inline-block;
 }
 
+.minus::after{
+    background-color: #803f7b;
+    color: white;
+    width: 50px;
+    height: 20px;
+    font: normal 14px "Calibri";
+    content: attr(data-tooltip);
+    position: absolute;
+    visibility: hidden;
+    transition: all 200ms ease;
+    opacity: 0;
+    border-radius: 5px;
+    margin-top: -15px;
+    margin-left: -32px;
+    padding: 5px;
+}
+
+.minus:hover::after{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-30px);
+}
+
 .plus{
     color: white;
     background: #44823d;
@@ -121,6 +167,29 @@ body{
     display: inline-block;
 }
 
+.plus::after{
+    background-color: #803f7b;
+    color: white;
+    width: 50px;
+    height: 20px;
+    font: normal 14px "Calibri";
+    content: attr(data-tooltip);
+    position: absolute;
+    visibility: hidden;
+    transition: all 200ms ease;
+    opacity: 0;
+    border-radius: 5px;
+    margin-top: -15px;
+    margin-left: -32px;
+    padding: 5px;
+}
+
+.plus:hover::after{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-30px);
+}
+
 .number{
     height: 36px;
     width: 36px;
@@ -130,6 +199,29 @@ body{
     text-align: center;
     box-sizing: border-box;
     display: inline-block;
+}
+
+.number::after{
+    background-color: #803f7b;
+    color: white;
+    width: 50px;
+    height: 20px;
+    font: normal 14px "Calibri";
+    content: attr(data-tooltip);
+    position: absolute;
+    visibility: hidden;
+    transition: all 200ms ease;
+    opacity: 0;
+    border-radius: 5px;
+    margin-top: -15px;
+    margin-left: -32px;
+    padding: 5px;
+}
+
+.number:hover::after{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-30px);
 }
 
 .b-bought{
@@ -201,4 +293,64 @@ input{
     height: 32px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+}
+
+.badge{
+    position: fixed;
+    width: 150px;
+    height: 150px;
+    left: 80px;
+    bottom: -100px;
+    color: white;
+    text-align: center;
+    font: bold 25px "Calibri";
+    background-color: #803f7b;
+    padding-top: 15px;
+    border-radius: 10px;
+    transition: all 100ms ease;
+    border-color: #803f7b;
+    border-width: 0;
+    border: solid;
+}
+
+.badge:hover{
+    transform: translateY(-60px);
+    background-color: slateblue;
+    border-color: slateblue;
+}
+
+.created-by{
+    font: normal 18px "Calibri";
+    color: white;
+    padding: 20px;
+}
+
+
+@media (max-width: 500px) {
+    .left-column{
+        width: 100%;
+    }
+
+    .right-column{
+        width: 100%;
+    }
+}
+
+@media print {
+    .badge{
+        background-color: white;
+        border-color: #803f7b;
+        border-width: 3px;
+        color: black;
+    }
+
+    .buylist{
+        display: none;
+        visibility: hidden;
+    }
+
+    .created-by{
+        padding-top: 0;
+        color: black;
+    }
 }
