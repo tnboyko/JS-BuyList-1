@@ -14,7 +14,7 @@ body{
     max-width: 1200px;
 }
 
-.left-column{
+.list{
     width: 68%;
     background: #ffffff;
     display: inline-block;
@@ -24,7 +24,7 @@ body{
     box-sizing: border-box;
 }
 
-.right-column{
+.bought{
     width: 30%;
     background: white;
     display: inline-block;
