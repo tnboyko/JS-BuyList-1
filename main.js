@@ -1,11 +1,11 @@
 $(document).ready(function () {
-    var LIST = $('.list');
-    var LIST_LAST = $('.right-column.last');
-    var LIST_BOUGHT = $('.right-column.bought');
+    var list = $('.buy-list');
+    var listLast = $('.right-column.last');
+    var listBought = $('.right-column.bought');
 
-    var ANOTHER_ONE_ITEM = $('#item').html();
-    var ANOTHER_ONE_LAST = $('#last').html();
-    var ANOTHER_ONE_BOUGHT = $('#bought').html();
+    var oneItem = $('#item').html();
+    var oneLast = $('#last').html();
+    var oneBought = $('#bought').html();
 
     addItem('Pomydory');
     addItem('Kartoplya');
@@ -13,9 +13,9 @@ $(document).ready(function () {
     addItem('Ogirok');
 
     function addItem(title) {
-        var node = $(ANOTHER_ONE_ITEM);
+        var node = $(oneItem);
 
-        node.find('.name').text(title);
+        node.find('.label').text(title);
         node.find('.delete-button').click(function() {
             node.remove();
             node_last.remove();
@@ -24,7 +24,7 @@ $(document).ready(function () {
         node.find('.bought-button').click(function() {
             var but_name = node.find('.bought-button').text();
             if(but_name === "Купленo") {
-                node.find('.name').css("text-decoration", "line-through");
+                node.find('.label').css("text-decoration", "line-through");
                 node.find('.minus').css("visibility", "hidden");
                 node.find('.plus').css("visibility", "hidden");
                 node.find('.delete-button').hide();
@@ -34,7 +34,7 @@ $(document).ready(function () {
                 node.find('.bought-button').text('Не куплено');
                 node.find('.bought-button').css("width", "124px");
             } else {
-                node.find('.name').css("text-decoration", "none");
+                node.find('.label').css("text-decoration", "none");
                 node.find('.minus').css("visibility", "visible");
                 node.find('.plus').css("visibility", "visible");
                 node.find('.delete-button').show();
@@ -60,11 +60,11 @@ $(document).ready(function () {
             node_bought.find('.bought-item-count').text(number);
         }
 
-        node.find('.bl-product_label').click(function() {
-            var but_name = node.find('.bl-buttons-boughted').text();
+        node.find('.label').click(function() {
+            var but_name = node.find('.bought-button').text();
             if(but_name === "Купленo") {
-                node.find('.name').hide();
-                var name = node.find('.name').text();
+                node.find('.label').hide();
+                var name = node.find('.label').text();
                 node.find('input').show().focus().val(name);
             }
         });
@@ -75,35 +75,35 @@ $(document).ready(function () {
                 changeName(new_name);
             }
             node.find('input').hide();
-            node.find('.name').show();
+            node.find('.label').show();
         });
 
         function changeName(name) {
-            node.find('.name').text(name);
+            node.find('.label').text(name);
             node_last.find('.right-column-last-name').text(name);
             node_bought.find('.right-column-bought-name').text(name);
         }
 
         node.find('input').hide();
 
-        LIST.append(node);
+        list.append(node);
 
-        var node_last = $(ANOTHER_ONE_LAST);
+        var node_last = $(oneLast);
         node_last.find('.right-column-last-name').text(title);
-        LIST_LAST.append(node_last);
+        listLast.append(node_last);
 
-        var node_bought = $(ANOTHER_ONE_BOUGHT);
+        var node_bought = $(oneBought);
         node_bought.find('.right-column-bought-name').text(title);
         node_bought.hide();
-        LIST_BOUGHT.append(node_bought);
+        listBought.append(node_bought);
     }
 
     $('.add-button').click(function() {
-        var FIELD = $('.add-field');
-        var name = FIELD.val();
+        var field = $('.add-field');
+        var name = field.val();
         if(name != "")
             addItem(name);
-        FIELD.val('');
-        FIELD.focus();
+        field.val('');
+        field.focus();
     });
 });

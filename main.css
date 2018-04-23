@@ -14,7 +14,7 @@ body {
     box-sizing: border-box;
 }
 
-.right-column {
+.right-bought {
     width: 30%;
     float: right;
 }
@@ -23,13 +23,13 @@ body {
     width: 70%;
 }
 
-.list, .bought {
+.buy-list, .bought {
     box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);
     border-radius: 5px;
     background-color: white;
 }
 
-.list {
+.buy-list {
     min-width: 450px;
 }
 
@@ -163,7 +163,7 @@ body {
 
 }
 
-.name {
+.label {
     margin-left: 2px;
     font-family: sans-serif;
     font-size: 14px;
@@ -202,7 +202,7 @@ body {
 
 /*Червона та Зелена кнопки*/
 
-.plus, .bl-minus {
+.plus, .minus {
     border-radius: 50%;
     border: none;
 
@@ -225,34 +225,9 @@ body {
 
 
 
-.bl-minus {
+.minus {
     background-color: #db2828;
     box-shadow: 0 -.2em 0 0 rgba(34,36,38,.15) inset;
-}
-
-
-
-.minus {
-    border-radius: 50%;
-    border: none;
-
-    color: white;
-
-    width: 31px;
-    height: 31px;
-
-    font-size: 18px;
-    font-weight: 500;
-
-    outline: none;
-    background-color: #8a8080;
-    box-shadow: 0 -.2em 0 0 rgba(34,36,38,.15) inset;
-}
-
-/*Вирівняти по центру символ '-'*/
-.button-minus-label {
-    display: inline-block;
-    padding-bottom: 1px;
 }
 
 /*
@@ -270,7 +245,7 @@ body {
     padding: 0 15px;
 }
 
-.bl-row-right {
+.right-column {
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -316,7 +291,7 @@ body {
     text-decoration: line-through;
 }
 
-#bought {
+#bought-pattern {
     display: none;
 }
 
