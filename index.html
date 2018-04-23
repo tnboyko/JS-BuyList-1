@@ -3,56 +3,85 @@
 <head lang="uk">
     <meta charset="UTF-8">
     <title>Buylist</title>
-    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="main.css"/>
 </head>
 <body>
+<!-- Центральна колoнка -->
 <div class="background">
-    <div class="list">
-        <div class="row">
-            <div class="input>"><input class="bl-in" type="text" placeholder="Назва товару">
-                <button class="add-button" data-tooltip="Додати продукт">Додати</button>
-            </div></div>
-    </div>
-    <div class="bought">
-        <div class="title">Залишилося</div>
-        <div class="title-left"></div>
-        <div class="title">Куплено</div>
-        <div class="title-bought"></div>
-    </div>
-    <div class="row-template" style="display: none;">
-        <div class="row">
-            <div class="product"></div>
-            <input class="name">
-            <div class="count">
-                <button class="minus" data-tooltip="-">-</button>
-                <span class="label">1</span>
-                <button class="plus" data-tooltip="+">+</button>
+    <div class="left-column">
+        <div class="list">
+            <!--Поле додавання товару-->
+            <div class="field">
+                <div class="add-row">
+                    <input type="text" placeholder="Назва товару" class="add-field">
+                    <button type="submit" class="add-button" data-tooltip="Додати до списку товар">Додати</button>
+                </div>
             </div>
-            <div class="buttons">
-                <button class="bought-button" data-tooltip="Куплено">Куплено</button>
-                <button class="unbought-button" >Не куплено</button>
-                <button class="remove-button" data-tooltip="Х">X</button>
-            </div>
-        </div>
-    </div>
-    <div class="bought-template" style="display: none;">
-        <div class="left">
-            <div class="what-left"></div>
-            <div class="number-left"></div>
-        </div>
-    </div>
-    <div class="left-template" style="display: none;">
-        <div class="left">
-            <div class="what-left" style="text-decoration: line-through;"></div>
-            <div class="number-left"></div>
-        </div>
-    </div>
-        <div class="badge">
-            <div class="buylist">BuyList</div>
-            <div class="created-by">Created by Boyko Tanya</div>
-        </div>
 
+            <!--Шаблон товару-->
+            <div id="item">
+                <div class="row">
+                    <div class="buttons">
+                        <div class="right-buttons">
+                            <button class="bought-button" data-tooltip="Списати товар">Купленo</button>
+                            <button class="delete-button" data-tooltip="Видалити товар">X</button>
+                        </div>
+                    </div>
+                    <div class="product-name">
+                        <span class="name">Name</span>
+                        <input type="text" value="name">
+                    </div>
+                    <div class="count">
+                        <button class="minus" data-tooltip="Зменшити">-</button>
+                        <span class="number">1</span>
+                        <button class="plus" data-tooltip="Збільшити">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Права колонка -->
+    <div class="right-column">
+        <div class="bought">
+            <div class="title"><h3>Залишилося</h3></div>
+            <div class="right-column last">
+
+                <!-- залишилося -->
+                <span id="last">
+                                <span class="bought-last">
+                                    <span class="right-column-last-name">Pattern</span>
+                                    <span class="last-item-count">1</span>
+                                </span>
+                            </span>
+            </div>
+            <div class="title"><h3>Куплено</h3></div>
+            <div class="right-column bought">
+
+                <!-- куплено-->
+                <span id="bought">
+                            <span class="bought-bought">
+                                <span class="right-column-bought-name">Pattern</span>
+                                <span class="bought-item-count">1</span>
+                            </span>
+                        </span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="badge">
+        <div class="badge-preview">
+            <span>Buylist</span>
+        </div>
+        <div class="badge-content">
+            <div>Created by:</div>
+            <div class="badge-content-name">Tanya Boyko</div>
+        </div>
+    </div>
 </div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="main.js"></script>
 </body>
 </html>

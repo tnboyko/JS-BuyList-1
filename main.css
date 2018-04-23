@@ -1,356 +1,428 @@
-body{
-    background: #DADADA;
+body {
+    background-color: #DADADA;
+    padding: 80px 97px 0;
 }
 
 .background {
-    width: 100%;
-    background: #DADADA;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
-    padding: 20px;
-    font-size: 14px;
-    font: normal 15px "Calibri";
-    max-width: 1200px;
+    background-color: #DADADA;
 }
 
-.list{
-    width: 68%;
-    background: #ffffff;
-    display: inline-block;
-    margin-bottom: 20px;
-    margin-right: 10px;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-.bought{
-    width: 30%;
-    background: white;
-    display: inline-block;
-    float: right;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-.add-new-product{
-    width: 97%;
-    border-top: 1px solid #cdcbcb;
-    margin-bottom: 10px;
-    margin-top: 0;
-}
-
-.row{
-    width: 97%;
-    border-top: 1px solid #cdcbcb;
-}
-
-
-.add-button{
-    background: #559fff;
-    color: white;
-    font: 22px "Calibri";
-    width: 19.4%;
-    float: right;
-    height: 38px;
-    outline: none;
-    padding-left: 0;
-    margin-left: 0;
-    border-left: 0;
-    border: solid;
-    border-width: 0;
-    border-color: #4173bb;
-    border-bottom-width: 3px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-
-}
-
-.add-button::after{
-    background-color: #803f7b;
-    color: white;
-    width: 100px;
-    height: 20px;
-    font: normal 14px "Calibri";
-    content: attr(data-tooltip);
-    position: absolute;
-    visibility: hidden;
-    transition: all 200ms ease;
-    opacity: 0;
-    border-radius: 5px;
-    margin-top: -10px;
-    margin-left: -85px;
-    padding: 5px;
-}
-
-.add-button:hover::after{
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(-30px);
-}
-
-.name{
-    align-items: center;
-    text-align: left;
-    width: 40%;
-    height: auto;
-    display: inline-block;
-    box-sizing: border-box;
-    font: normal 20px "Calibri";
-}
-
-.add-buttons{
-    width: 40%;
-    display: inline-block;
-    box-sizing: inherit;
-}
-
-.buttons{
-    width: 18%;
-    display: inline-block;
-    box-sizing: inherit;
-}
-
-.row{
+.right-column, .left-column {
+    background-color: #DADADA;
     padding: 15px;
-    vertical-align: middle;
-}
-
-.minus{
-    color: white;
-    background: #c8918e;
-    width: 36px;
-    height: 36px;
-    border-radius: 18px;
-    border: solid;
-    border-width: 0;
-    border-bottom-width: 2px;
-    border-color: #88625b;
-    box-sizing: border-box;
     display: inline-block;
-}
-
-.minus::after{
-    background-color: #803f7b;
-    color: white;
-    width: 50px;
-    height: 20px;
-    font: normal 14px "Calibri";
-    content: attr(data-tooltip);
-    position: absolute;
-    visibility: hidden;
-    transition: all 200ms ease;
-    opacity: 0;
-    border-radius: 5px;
-    margin-top: -15px;
-    margin-left: -32px;
-    padding: 5px;
-}
-
-.minus:hover::after{
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(-30px);
-}
-
-.plus{
-    color: white;
-    background: #44823d;
-    width: 36px;
-    height: 36px;
-    border-radius: 18px;
-    border: solid;
-    border-width: 0;
-    border-bottom-width: 2px;
-    border-color: #265626;
     box-sizing: border-box;
+}
+
+.right-column {
+    width: 30%;
+    float: right;
+}
+
+.left-column {
+    width: 70%;
+}
+
+.list, .bought {
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);
+    border-radius: 5px;
+    background-color: white;
+}
+
+.list {
+    min-width: 450px;
+}
+
+.row {
+    display: block;
+    border-top: 1px solid rgba(34,36,38,.15);
+    padding: 7px;
+}
+
+.product-name, .count, .buttons {
     display: inline-block;
-}
-
-.plus::after{
-    background-color: #803f7b;
-    color: white;
-    width: 50px;
-    height: 20px;
-    font: normal 14px "Calibri";
-    content: attr(data-tooltip);
-    position: absolute;
-    visibility: hidden;
-    transition: all 200ms ease;
-    opacity: 0;
-    border-radius: 5px;
-    margin-top: -15px;
-    margin-left: -32px;
-    padding: 5px;
-}
-
-.plus:hover::after{
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(-30px);
-}
-
-.number{
-    height: 36px;
-    width: 36px;
-    background-color: #cdcbcb;
-    padding: 8px;
-    border-radius: 5px;
-    text-align: center;
     box-sizing: border-box;
-    display: inline-block;
 }
 
-.number::after{
-    background-color: #803f7b;
-    color: white;
-    width: 50px;
-    height: 20px;
-    font: normal 14px "Calibri";
-    content: attr(data-tooltip);
-    position: absolute;
-    visibility: hidden;
-    transition: all 200ms ease;
-    opacity: 0;
-    border-radius: 5px;
-    margin-top: -15px;
-    margin-left: -32px;
-    padding: 5px;
+/*
+*
+*Центральна колонка - стрічка додавання товару
+*
+*/
+
+#item {
+    display: none;
 }
 
-.number:hover::after{
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(-30px);
+.field {
+    padding: 12px 15px;
 }
 
-.b-bought{
-    height: 36px;
-    width: 80px;
+.add-row {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 37px;
+}
+
+.add-field {
+    flex: auto;
+    height: 37px;
+    box-sizing: border-box;
+    padding: 5px 15px;
+    font-size: 15px;
+    border: 1px solid rgba(34,36,38,.15);
+    border-right-color: transparent;
+    border-radius: 4px 0 0 4px;
+
+}
+
+.add-field:focus {
     outline: none;
-    background-color: #cdcbcb;
-    border-radius: 5px;
-    border: solid;
-    border-width: 0;
-    border-color: #817f7f;
-    border-bottom-width: 3px;
-    display: inline-block;
-
+    border: 1px solid #39c;
 }
 
-.b-remove{
-    background-color: #c81004;
-    color: white;
-    height: 36px;
-    width: 36px;
+.add-button {
+    background-color: #2185D0;
+    color: #FFF;
+    border: none;
+    height: 37px;
+    width: 100px;
+    font-size: 14px;
+    font-weight: 600;
     outline: none;
-    border-radius: 5px;
-    border: solid;
-    border-width: 0;
-    border-bottom-width: 3px;
-    border-color: #880000;
-    display: inline-block;
+    box-shadow: 0 -.3em 0 0 rgba(34,36,38,.15) inset;
 }
 
-.title{
-    font: bold 20px "Calibri";
-    padding: 10px;
-    border-top: 1px solid #cdcbcb;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #cdcbcb;
+.add-button:hover {
+    cursor: pointer;
+    background-color: #1678c2;
 }
 
-.left{
-    display: inline-block;
-    font: normal 14px "Calibri";
-    text-align: center;
-    padding: 5px;
-    margin: 2px;
-    background-color: #cdcbcb;
-    border-radius: 5px;
 
+/*
+*
+*Ліва головнка колонка - права колонка - кнопки "Куплено", "х"(відміна)
+*
+*/
+
+.buttons {
+    width: 40%;
+    float: right;
 }
 
-.what-left{
-    text-align: left;
-    display: inline-block;
+.right-buttons {
+    float: right;
 }
 
-.number-left{
-    display: inline-block;
-    text-align: center;
-    padding: 0;
-    margin: auto;
-    width: 20px;
-    height: 20px;
-    color: white;
-    background-color: orangered;
-    border-radius: 10px;
-}
-
-input{
-    width: 80%;
+.bought-button, .delete-button {
+    font-family: sans-serif;
+    font-size: 11px;
     height: 32px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
 }
 
-.badge{
-    position: fixed;
-    width: 150px;
-    height: 150px;
-    left: 80px;
-    bottom: -100px;
+.delete-button {
+    width: 32px;
+
+    background-color: #DB2828;
+    box-shadow: 0 -.3em 0 0 rgba(34,36,38,.15) inset;
     color: white;
+
+    font-weight: 600;
+    font-size: 12px;
+    margin-right: 8px;
+
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
+    outline: none;
+}
+
+.bought-button {
+    width: 80px;
+
+    font-family: inherit;
+    font-weight: 600;
+
+    margin-right: 3px;
+
+    color: rgba(0,0,0,.6);
+}
+
+/*
+*
+*Центральна колонка - назва товару (ліва колонка)
+*
+*/
+
+.product-name {
+    width: 40%;
+    float: left;
+    padding: 7px;
+
+}
+
+.name {
+    margin-left: 2px;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: rgba(0,0,0,.87);
+}
+
+/*
+*
+*Центральна колнка - центральні кнопки (декримент, інкримент, каунтер)
+*
+*/
+
+.count {
+    width: 20%;
     text-align: center;
-    font: bold 25px "Calibri";
-    background-color: #803f7b;
-    padding-top: 15px;
-    border-radius: 10px;
-    transition: all 100ms ease;
-    border-color: #803f7b;
-    border-width: 0;
-    border: solid;
 }
 
-.badge:hover{
-    transform: translateY(-60px);
-    background-color: slateblue;
-    border-color: slateblue;
+/*Каунтер*/
+.number {
+    background-color: #E8E8E8;
+    color: rgba(0,0,0,.6);
+
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    margin-right: 3px;
+    margin-left: 3px;
+
+    border-radius: 3px;
 }
 
-.created-by{
-    font: normal 18px "Calibri";
+/*Червона та Зелена кнопки*/
+
+.plus, .bl-minus {
+    border-radius: 50%;
+    border: none;
+
     color: white;
-    padding: 20px;
+
+    width: 31px;
+    height: 31px;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    cursor: pointer;
+    outline: none;
 }
 
+.plus {
+    background-color: #21BA45;
+    box-shadow: 0 -.2em 0 0 rgba(34,36,38,.15) inset;
+}
+
+
+
+.bl-minus {
+    background-color: #db2828;
+    box-shadow: 0 -.2em 0 0 rgba(34,36,38,.15) inset;
+}
+
+
+
+.minus {
+    border-radius: 50%;
+    border: none;
+
+    color: white;
+
+    width: 31px;
+    height: 31px;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    outline: none;
+    background-color: #8a8080;
+    box-shadow: 0 -.2em 0 0 rgba(34,36,38,.15) inset;
+}
+
+/*Вирівняти по центру символ '-'*/
+.button-minus-label {
+    display: inline-block;
+    padding-bottom: 1px;
+}
+
+/*
+*
+*Права колонка - інформація "Залишелося", "Куплено"
+*
+*/
+
+.bought {
+    min-width: 180px;
+}
+
+.title {
+    border-top: 1px solid rgba(34,36,38,.15);
+    padding: 0 15px;
+}
+
+.bl-row-right {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    border-top: 1px solid rgba(34,36,38,.15);
+    padding: 10px 10px;
+}
+
+.bought-last, .bought-bought {
+    display: inline;
+    background-color: rgba(232, 232, 232, 1);
+    padding: 6px 6px;
+    margin: 2px 2px;
+    border-radius: 3px;
+
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 11px;
+    font-weight: 700;
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+}
+
+.bought-bought {
+    text-decoration: line-through;
+}
+
+#last {
+    display: none;
+}
+/*
+*
+* Права колонка - каунтери товарів на складі/куплених
+*
+*/
+
+.bought-item-count, .last-item-count {
+    background-color: rgba(242, 113, 28, 1);
+    padding: 3px 6px;
+    border-radius: 50%;
+    color: rgba(255, 255, 255, .80);
+}
+
+.bought-item-count {
+    text-decoration: line-through;
+}
+
+#bought {
+    display: none;
+}
 
 @media (max-width: 500px) {
-    .left-column{
+
+    .right-column, .left-column {
         width: 100%;
     }
 
-    .right-column{
-        width: 100%;
+}
+
+
+/*Бейджик*/
+.badge {
+    position: fixed;
+    bottom: -80px;
+    left: 90px;
+
+    width: 125px;
+    height: 85px;
+    border-radius: 6px 6px 0 0;
+
+    background-color: blueviolet;
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+
+    padding: 10px 20px 25px 20px;
+
+    transition: bottom 1s ease, background-color 1s ease;
+}
+
+.badge:hover {
+    bottom: 0px;
+    background-color: blue;
+}
+
+.badge-preview {
+    font-weight: 600;
+    font-size: 21px;
+    text-align: center;
+}
+
+.badge-content {
+    padding-top: 27px;
+}
+
+.badge-content-name {
+    padding-top: 7px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/*Для печаті*/
+@media print {
+    .badge {
+        bottom: 0;
+        background-color: white;
+        color: black;
+        border: 1px solid;
+
+        height: auto;
+        padding: 0 10px;
+    }
+
+    .badge-preview {
+        display: none;
+    }
+
+    .badge-content {
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
 }
 
-@media print {
-    .badge{
-        background-color: white;
-        border-color: #803f7b;
-        border-width: 3px;
-        color: black;
-    }
+/*Підказки*/
 
-    .buylist{
-        display: none;
-        visibility: hidden;
-    }
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
 
-    .created-by{
-        padding-top: 0;
-        color: black;
-    }
+button::after {
+    content: attr(data-tooltip);
+    visibility: hidden;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    z-index: 999;
+    width: 230px;
+    margin-left: -127px;
+    padding: 10px;
+    opacity: 0;
+    background-color: blueviolet;
+    color: #FFF;
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: all 0.45s ease-out 0.55s;
+}
+
+button:hover::after {
+    visibility: visible;
+    bottom: 30px;
+    opacity: 0.9;
+
 }
